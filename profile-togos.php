@@ -17,3 +17,15 @@ added the follows:
 			echo '</ul>';
 		} 
 		//End Files for Hosts
+					    
+In theme editor: DirectoryEngine: Page Profile Page Template (mobile/page-profile.php), 
+added for mobile:
+<?php $user_meta=get_userdata($user_ID); $user_roles=$user_meta->roles;
+if (in_array("host", $user_roles)){
+		//$output = load_host_files();
+		//$total_togo = count($output[0]); ?>
+                <a href="#user_togo" role="tab" data-toggle="tab">
+                    <i class="fa fa-pagelines"></i><?php _e("Files", ET_DOMAIN); ?>
+                </a>
+				<?php } else {…
+
